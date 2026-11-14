@@ -1,0 +1,13 @@
+# Comando: npm ci
+# Pasta: entrega-v2/Muriel
+# Data/hora: 2026-11-14 20:13:15 -0300
+
+
+added 37 packages, and audited 38 packages in 2s
+
+13 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+# Exit code: 0

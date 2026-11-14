@@ -1,0 +1,34 @@
+# Comando: npx vitest run --reporter=verbose --no-color
+# Pasta: entrega-v2/Muriel
+# Data/hora: 2026-11-14 20:13:18 -0300
+
+npm notice run muriel-testes@1.0.0 npx
+npm notice run vitest run --reporter=verbose --no-color
+
+ RUN  v5.1.0 C:/Users/lucas/Documents/Muriel/entrega-v2/Muriel
+
+ ✓ testes/validacao-produto.test.js > validarProduto > Classe 1: todos os campos obrigatórios válidos > CT-01 aceita o produto (nenhum erro) 2ms
+ ✓ testes/validacao-produto.test.js > validarProduto > Classe 1: todos os campos obrigatórios válidos > CT-02 aceita o produto sem os campos opcionais 0ms
+ ✓ testes/validacao-produto.test.js > validarProduto > Classe 2: um campo obrigatório vazio > CT-03 rejeita o produto com o campo nome vazio 0ms
+ ✓ testes/validacao-produto.test.js > validarProduto > Classe 2: um campo obrigatório vazio > CT-04 rejeita o produto com o campo nome só com espaços 0ms
+ ✓ testes/validacao-produto.test.js > validarProduto > Classe 2: um campo obrigatório vazio > CT-05 rejeita o produto com o campo quantidade vazio 0ms
+ ✓ testes/validacao-produto.test.js > validarProduto > Classe 2: um campo obrigatório vazio > CT-06 rejeita o produto com o campo unidade vazio 0ms
+ ✓ testes/validacao-produto-limites.test.js > validarProduto: valores-limite da quantidade > CT-07 aceita quantidade 0.0001 (logo acima do limite, na precisão do banco) 2ms
+ ✓ testes/validacao-produto-limites.test.js > validarProduto: valores-limite da quantidade > CT-08 aceita quantidade 0.01 (próximo do limite, passo de centésimos) 0ms
+ ✓ testes/validacao-produto-limites.test.js > validarProduto: valores-limite da quantidade > CT-09 aceita quantidade 1 (valor típico) 0ms
+ ✓ testes/validacao-produto-limites.test.js > validarProduto: valores-limite da quantidade > CT-10 aceita quantidade 1000.5 (decimal grande) 0ms
+ ✓ testes/validacao-produto-limites.test.js > validarProduto: valores-limite da quantidade > CT-11 rejeita quantidade 0 (no limite) com mensagem de valor inválido 0ms
+ ✓ testes/validacao-produto-limites.test.js > validarProduto: valores-limite da quantidade > CT-12 rejeita quantidade 0.0 (zero decimal) com mensagem de valor inválido 0ms
+ ✓ testes/validacao-produto-limites.test.js > validarProduto: valores-limite da quantidade > CT-13 rejeita quantidade -0.0001 (logo abaixo do limite, na precisão do banco) com mensagem de valor inválido 0ms
+ ✓ testes/validacao-produto-limites.test.js > validarProduto: valores-limite da quantidade > CT-14 rejeita quantidade -0.01 (abaixo do limite, passo de centésimos) com mensagem de valor inválido 0ms
+ ✓ testes/validacao-produto-limites.test.js > validarProduto: valores-limite da quantidade > CT-15 rejeita quantidade -1 (negativo) com mensagem de valor inválido 0ms
+ ✓ testes/validacao-produto-limites.test.js > validarProduto: valores-limite da quantidade > CT-16 rejeita quantidade abc (não numérico) com mensagem de valor inválido 0ms
+ ✓ testes/validacao-produto-limites.test.js > validarProduto: valores-limite da quantidade > CT-17 trata quantidade só com espaços como campo vazio (obrigatória) 0ms
+ ✓ testes/validacao-produto-limites.test.js > validarProduto: valores-limite da quantidade > CT-18 acumula os erros quando vários campos obrigatórios estão inválidos 0ms
+
+ Test Files  2 passed (2)
+      Tests  18 passed (18)
+   Start at  20:13:17
+   Duration  249ms (transform 49%, import 30%, worker 13%, tests 9%)
+
+# Exit code: 0

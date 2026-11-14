@@ -1,0 +1,43 @@
+# Ambiente e versão do sistema usados nos testes
+Data/hora da coleta: 2026-11-14 20:14:01 -0300
+
+## Sistema sob teste
+Projeto: StockFlow (frontend React) | Repositório: https://github.com/Pansera13/TCC
+Branch: testes-validacao-produto (criado a partir de main em c90f6c07b1b66feedc414d93ca02f165300dbe64)
+Merge no main: 3053d80 (o código testado não muda: o merge só juntou este commit com uma alteração do README.md da raiz)
+Commit testado: a0d2ff93b1b0a415d77b472a50cee80880939bad
+Link do commit: https://github.com/Pansera13/TCC/commit/a0d2ff93b1b0a415d77b472a50cee80880939bad
+Mensagem: Extrai validarProduto do AddProductModal para teste de componente
+Arquivos alterados no commit:
+   TCC-Claude/frontend/src/components/AddProductModal.jsx | 13 ++-----------
+   TCC-Claude/frontend/src/utils/productValidation.js     | 12 ++++++++++++
+   2 files changed, 14 insertions(+), 11 deletions(-)
+Versão do pacote frontend: 0.0.0
+Cópia incluída no pacote: entrega-v2/TCC-Claude/frontend (extraída do commit com: git archive a0d2ff93b1b0a415d77b472a50cee80880939bad TCC-Claude/frontend)
+
+## Conferência: arquivo testado no pacote x arquivo no commit (git hash-object)
+  pacote c22cacf7d54d3ce75f8262420b83bf3f554bc84f | commit c22cacf7d54d3ce75f8262420b83bf3f554bc84f | igual | TCC-Claude/frontend/src/utils/productValidation.js
+  pacote 580d26eb529ca9c8f668716ca88a992479c5ad84 | commit 580d26eb529ca9c8f668716ca88a992479c5ad84 | igual | TCC-Claude/frontend/src/components/AddProductModal.jsx
+
+## Hash dos arquivos de teste e configuração (git hash-object)
+  b009e54cffbc6e7f0be148b281978d994d87604e  Muriel/testes/validacao-produto.test.js
+  43d280ee37810e6531ad9565840a31314853b525  Muriel/testes/validacao-produto-limites.test.js
+  766ce901752c862fb4a5cc4495e822081ee2f26e  Muriel/vitest.config.js
+  06ecedab20c334cc176ef6fa99fa7edac5cd6e67  Muriel/package.json
+  1132fa5a9a67f86b2e51e1766ce2b9bbc0cbd3a5  Muriel/package-lock.json
+  1255078235d0ce4e80ac34866d5ce2af89aa6220  Muriel/.oxlintrc.json
+
+## Ferramentas (instaladas na pasta Muriel por npm ci, versões fixas no package-lock.json)
+Vitest: 5.1.0
+oxlint: 1.83.0
+Vite (usado internamente pelo Vitest): 8.3.8
+
+## Condições de execução
+Node.js: v24.21.0
+npm: 12.0.2
+SO: Microsoft Windows 11 Pro 10.0.26200 64 bits
+Ambiente de teste do Vitest: node (sem navegador/DOM), definido em Muriel/vitest.config.js
+Estrutura exigida: as pastas Muriel e TCC-Claude lado a lado na mesma pasta pai (os testes importam ../../TCC-Claude/frontend/src/utils/productValidation.js)
+Dependências externas: nenhuma (sem backend, banco, rede ou variáveis de ambiente)
+Dados de teste: objetos criados dentro dos próprios arquivos de teste
+Dependências do frontend (React, Vite do projeto etc.): não instaladas nem usadas; a função testada não importa nada

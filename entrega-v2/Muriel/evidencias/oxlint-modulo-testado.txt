@@ -1,0 +1,8 @@
+# Comando: npm run lint:modulo
+# Pasta: entrega-v2/Muriel
+# Data/hora: 2026-11-14 20:13:22 -0300
+
+npm notice run muriel-testes@1.0.0 lint:modulo
+npm notice run cd .. && node Muriel/node_modules/oxlint/bin/oxlint -c Muriel/.oxlintrc.json TCC-Claude/frontend/src/utils/productValidation.js Muriel/testes/validacao-produto.test.js Muriel/testes/validacao-produto-limites.test.js
+
+# Exit code: 0

@@ -1,0 +1,22 @@
+# Comando: npx vitest run testes/validacao-produto.test.js --reporter=verbose
+# Pasta: entrega-v2/Muriel
+# Data/hora: 2026-11-14 20:14:24 -0300
+
+npm notice run muriel-testes@1.0.0 npx
+npm notice run vitest run testes/validacao-produto.test.js --reporter=verbose --no-color
+
+ RUN  v5.1.0 C:/Users/lucas/Documents/Muriel/entrega-v2/Muriel
+
+ ✓ testes/validacao-produto.test.js > validarProduto > Classe 1: todos os campos obrigatórios válidos > CT-01 aceita o produto (nenhum erro) 3ms
+ ✓ testes/validacao-produto.test.js > validarProduto > Classe 1: todos os campos obrigatórios válidos > CT-02 aceita o produto sem os campos opcionais 0ms
+ ✓ testes/validacao-produto.test.js > validarProduto > Classe 2: um campo obrigatório vazio > CT-03 rejeita o produto com o campo nome vazio 0ms
+ ✓ testes/validacao-produto.test.js > validarProduto > Classe 2: um campo obrigatório vazio > CT-04 rejeita o produto com o campo nome só com espaços 0ms
+ ✓ testes/validacao-produto.test.js > validarProduto > Classe 2: um campo obrigatório vazio > CT-05 rejeita o produto com o campo quantidade vazio 0ms
+ ✓ testes/validacao-produto.test.js > validarProduto > Classe 2: um campo obrigatório vazio > CT-06 rejeita o produto com o campo unidade vazio 0ms
+
+ Test Files  1 passed (1)
+      Tests  6 passed (6)
+   Start at  20:14:23
+   Duration  213ms (import 47%, transform 23%, worker 16%, tests 14%, environment 1%)
+
+# Exit code: 0
