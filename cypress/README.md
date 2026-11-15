@@ -19,10 +19,15 @@ npm install   # na raiz do repositório
 Em outro terminal:
 
 ```bash
-cd "TCC Claude/frontend" && npm run dev       # https://localhost:5173
+cd "TCC Claude/frontend" && VITE_RECAPTCHA_SITE_KEY= npm run dev     # https://localhost:5173
 # opcional (só para os testes de backend real):
-cd "TCC Claude/backend" && npm run dev        # http://localhost:3001
+cd "TCC Claude/backend" && npm run dev                                # http://localhost:3001
 ```
+
+> **reCAPTCHA:** o Cypress não resolve CAPTCHA. Com `VITE_RECAPTCHA_SITE_KEY` preenchida no `.env`
+> do frontend, o botão de cadastro/recuperação fica bloqueado e os testes que enviam esses
+> formulários aparecem como *pending*. Por isso o comando acima sobe o frontend com a chave vazia
+> (no PowerShell: `$env:VITE_RECAPTCHA_SITE_KEY=""; npm run dev`). O `.env` não é alterado.
 
 ## Executando
 
@@ -32,6 +37,7 @@ npm run cy:run    # headless (CI)
 ```
 
 Um spec só: `npx cypress run --spec cypress/e2e/auth/login.cy.js`.
+Uma área inteira: `npx cypress run --spec "cypress/e2e/estoque/**"`.
 
 ## Configuração
 
@@ -57,12 +63,26 @@ o backend **simulado** (`cy.intercept`) e nunca toca o banco. Use sempre um usu�
 ```
 cypress/
   README.md
-  e2e/auth/        login e navegação/rotas protegidas
-  e2e/dashboard/   área autenticada (backend simulado)
-  fixtures/        respostas falsas da API
-  support/         comandos customizados (commands.js) e setup (e2e.js)
+  e2e/
+    auth/          login e navegação / rotas protegidas
+    dashboard/     abertura do dashboard, sair da conta, sessão expirada
+    conta/         cadastro, recuperação de senha (3 etapas), perfil
+    estoque/       listagem/busca/ordenação, adicionar produto (manual, EAN, NF-e),
+                   retirada, editar e remover (com permissão por cargo)
+    gestao/        equipe e hierarquia de cargos, movimentações, relatórios e CSV
+  fixtures/        respostas falsas da API (usuário, produtos, usuários, movimentações, relatório)
+  support/
+    commands.js    comandos customizados
+    e2e.js         setup global
+    captcha.js     ignora testes quando o reCAPTCHA está ativo
+    estoque.js     API de produtos simulada, com estado em memória
+    equipe.js      API de usuários simulada, com estado em memória
+    consultas.js   movimentações simuladas e helpers das abas de consulta
 cypress.config.js   (na raiz do repositório)
 ```
+
+Todos os testes usam o backend **simulado** (`cy.intercept`): nada é gravado no banco. As APIs
+simuladas mantêm estado, então criar, editar, remover ou retirar atualiza a lista como o backend faria.
 
 ### Comandos customizados
 
